@@ -4,7 +4,7 @@
 ### 스터디 방식 ⛳️
 - 일주일에 4문제
 - 매주 금요일 점심 시간까지
-- 담당 순서 : minji -> seoha -> chaewon -> seoyeon
+- 담당 순서 : [@alswlfl29](https://github.com/alswlfl29) → [@sseohalee](https://github.com/sseohalee) → [@lcw729](https://github.com/lcw729) → [@seoyeon08](https://github.com/seoyeon08)
 - 2회 불참 시, 커피 쏘기 🎉 
 ### 문제 선정 기준 🧐
 - 프로그래머스 
