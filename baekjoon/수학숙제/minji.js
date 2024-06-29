@@ -10,8 +10,9 @@ contents.map((content) => {
   let items = content
     .split('/')
     .filter((n) => n !== '')
-    .map(Number);
+    .map(BigInt); // BigInt로 해야 제대로 된 값이 나옴
   numbers.push(...items);
 });
 
-numbers.sort((a, b) => a - b).forEach((number) => console.log(number));
+numbers.sort((a, b) => (a < b ? -1 : a > b ? 1 : 0)); // BigInt의 정렬 방법
+console.log(numbers.join('\n').trim());
