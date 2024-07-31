@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/가장 긴 증가하는 부분 수열" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/단지번호붙이기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/스택 수열" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/옥상 정원 꾸미기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/적록색약" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/절댓값 힙" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
