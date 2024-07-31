@@ -27,8 +27,8 @@
 └── programmers
     └── 문제 제목
         ├── eunsoo.py
-        ├── gunwoo.java
-        ├── hyeonwoo.java
+        ├── geonwoo.java
+        ├── hyeonu.java
         ├── jaegun.py
         ├── minji.js
         ├── seoha.py
