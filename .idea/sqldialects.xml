@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/SQL/조건에 맞는 사용자와 총 거래금액 조회하기/hyeonu.sql" dialect="GenericSQL" />
-  </component>
-</project>
