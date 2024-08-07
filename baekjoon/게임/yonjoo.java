@@ -11,14 +11,15 @@ public class Main {
 
        if(initialZ >= 99) return -1;
 
-       double start = 1;
-       double end = Integer.MAX_VALUE;
+    //double -> long
+       long start = 1;
+       long end = Integer.MAX_VALUE;
 
-       double lt = start;
-       double rt = end;
-       double mid = 0;
+       long lt = start;
+       long rt = end;
+       long mid = 0;
 
-       double res = 0;
+       long res = 0;
 
        
        //binary search, 구체적이 target의 존재여부 확인하지 않고 가능한만큼 땡기기
