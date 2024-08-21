@@ -1,33 +1,32 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
-    static StringBuilder sb=new StringBuilder();
-    static int[] visited=new int[10001]; // 수의 합의 중복을 체크하는 배열
-    static int n,answer=0;
-    static int[] arr= {1,5,10,50};
+
+    static int list[] = {1, 5, 10, 50};
+    static boolean visit[] = new boolean[1001];    // 방문 여부
+    static int answer = 0;
+    static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        Scanner sc=new Scanner(System.in);
-        n=sc.nextInt();
 
-        dfs(0,0,0);
+        Scanner scan = new Scanner(System.in);
+
+        int n = scan.nextInt(); // n값
+        scan.close();
+
+        dfs(n, 0, 0);
         sb.append(answer);
-
         System.out.println(sb);
     }
-    static void dfs(int depth, int start, int sum) {
-        if(depth==n) {
-            // 수의 합이 이전에 나온적 없는 수라면 count
-            if(visited[sum]==0) {
+    private static void dfs(int n, int idx, int sum){
+        if (n == 0){
+            if(!visit[sum]){
                 answer++;
-                visited[sum]=1;
+                visit[sum] = true;
             }
             return;
         }
-
-        // 수의 선택의 중복을 피하기 위해 start 부터 탐색 시작
-        for(int i=start;i<4;i++) {
-            dfs(depth+1,i,sum+arr[i]);
+        for (int i = idx; i < 4; i++){
+            dfs(n-1, i, sum + list[i]);
         }
     }
 }
