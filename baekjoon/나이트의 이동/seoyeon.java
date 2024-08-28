@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class KnightMove7562_blog {
+public class Main {
     static int[] dx = {-1, -2, -2, -1, 1, 2, 2, 1}; // 8방향 탐색
     static int[] dy = {-2, -1, 1, 2, 2, 1, -1, -2};
     static int t;
