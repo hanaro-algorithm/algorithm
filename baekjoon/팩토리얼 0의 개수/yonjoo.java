@@ -8,28 +8,30 @@ public class Main {
 
         int num = Integer.parseInt(br.readLine());
 
+        //이진탐색용 변수들
         int lt = 1;
         int rt= num * 5;
         boolean flag = false;
-        
+
+
+        //이진탐색
         while ( lt <= rt){
             int mid = (lt+rt)/2;
-            if( solve(mid) > num){
+            if( solve(mid) > num){ // 뒤에 붙은 0의 갯수 > num
                 rt=mid-1;
-            } else if(solve(mid)== num){
+            }
+            else if(solve(mid) == num){ //찾으면
                 rt=mid-1;
-                flag=true;
+                System.out.println(lt);
+                return;
             }
             else{
                 lt = mid+1;
             }
         }
 
-        if(flag){
-            System.out.println(lt);
-        }else{
-            System.out.println(-1);
-        }
+        System.out.println(-1);
+
     }
 
     private static int solve(int mid){
