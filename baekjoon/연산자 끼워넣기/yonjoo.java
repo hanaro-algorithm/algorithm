@@ -3,13 +3,14 @@ import java.util.*;
 
 public class Main {
 
-
     static int[] numbers;
     static int[] operands;
     static int[] out;
     static int[] visited;
 
-    static List<Integer> list;
+    //static List<Integer> list; // 비효율적, 몇 개까지 경우의 수가 나올지 모르기 때문
+    static int max = Integer.MIN_VALUE;
+    static int min = Integer.MAX_VALUE;
 
     private void permutation(int depth){
         if(depth == 0){
@@ -83,6 +84,5 @@ public class Main {
         T.solution(N);
 
     }
-
 
 }
