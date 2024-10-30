@@ -9,7 +9,7 @@ public class Main {
     class Schedule {
         int start;
         int end;
-        int length;
+        // int length; //메모리 비효율적임 
 
         Schedule(int start, int end){
             this.start = start;
