@@ -4,11 +4,13 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/DFS와 BFS" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Four Squares" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/IPv6" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/KCPC" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/NBA 농구" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/N과 M (1)" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/가로 세로 퍼즐" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/가장 가까운 세 사람의 심리적 거리" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/가장 긴 증가하는 부분 수열" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/걸그룹 마스터 준석이" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/게임" isTestSource="false" />
@@ -26,6 +28,7 @@
       <sourceFolder url="file://$MODULE_DIR$/단지번호붙이기" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/달력" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/두 수의 합" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/두 스티커" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/듣보잡" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/로마 숫자 만들기" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/로봇 청소기" isTestSource="false" />
@@ -33,6 +36,7 @@
       <sourceFolder url="file://$MODULE_DIR$/마인크래프트" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/무한 문자열" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/문서 검색" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/물건 팔기" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/빗물" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/상근이의 여행" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/생일" isTestSource="false" />
@@ -55,6 +59,8 @@
       <sourceFolder url="file://$MODULE_DIR$/옥상 정원 꾸미기" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/음식물 피하기" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/적록색약" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/전공책" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/전구 길만 걷자" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/절댓값 힙" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/점프 점프" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/점프왕 쩰리 (Small)" isTestSource="false" />
@@ -65,6 +71,9 @@
       <sourceFolder url="file://$MODULE_DIR$/추월" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/치킨치킨치킨" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/침투" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/카드 놓기" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/캠프 준비" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/토너먼트" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/퇴사" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/파도반 수열" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/파일 정리" isTestSource="false" />
@@ -74,6 +83,7 @@
       <sourceFolder url="file://$MODULE_DIR$/피아노 체조" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/학생 번호" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/햄버거 분배" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/호텔 방 번호" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/회전초밥" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/후보 추천하기" isTestSource="false" />
     </content>
