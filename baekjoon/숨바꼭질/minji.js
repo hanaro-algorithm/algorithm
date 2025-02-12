@@ -18,9 +18,6 @@ class Queue {
   getLength() {
     return this.tailIndex - this.headIndex;
   }
-  peek() {
-    return this.queue[this.headIndex];
-  }
 }
 
 const fs = require('fs');
@@ -28,18 +25,19 @@ const input = fs.readFileSync('/dev/stdin').toString().split('\n');
 
 const [N, K] = input[0].split(' ').map(Number);
 
-const visited = Array.from({ length: 100001 }, () => 0);
+const visited = Array.from({ length: 100001 }, () => false);
 const queue = new Queue();
-queue.enqueue(N);
+queue.enqueue([N, 0]);
+visited[N] = true;
 
 while (queue.getLength() > 0) {
-  const x = queue.dequeue();
-  if (x === K) return console.log(visited[K]);
+  const [x, time] = queue.dequeue();
+  if (x === K) return console.log(time);
   for (let next of [x - 1, x + 1, x * 2]) {
     if (next < 0 || next > 100000) continue;
     if (!visited[next]) {
-      visited[next] = visited[x] + 1;
-      queue.enqueue(next);
+      visited[next] = true;
+      queue.enqueue([next, time + 1]);
     }
   }
 }
