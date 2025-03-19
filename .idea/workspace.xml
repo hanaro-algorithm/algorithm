@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97b0ead7-1055-4684-b523-4de90b173d18" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SQL/대장균의 크기에 따라 분류하기 2/tlsaudwl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/대장균의 크기에 따라 분류하기 2/tlsaudwl.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/baekjoon/괄호/tlsaudwl.java" beforeDir="false" afterPath="$PROJECT_DIR$/baekjoon/괄호/tlsaudwl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SQL/조건별로 분류하여 주문상태 출력하기/tlsaudwl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL/조건별로 분류하여 주문상태 출력하기/tlsaudwl.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/공통 부분 문자열/tlsaudwl.java" beforeDir="false" afterPath="$PROJECT_DIR$/baekjoon/공통 부분 문자열/tlsaudwl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/단축키 지정/tlsaudwl.java" beforeDir="false" afterPath="$PROJECT_DIR$/baekjoon/단축키 지정/tlsaudwl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/전쟁-땅따먹기/tlsaudwl.java" beforeDir="false" afterPath="$PROJECT_DIR$/baekjoon/전쟁-땅따먹기/tlsaudwl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/좋은수열/tlsaudwl.java" beforeDir="false" afterPath="$PROJECT_DIR$/baekjoon/좋은수열/tlsaudwl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +18,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -29,7 +38,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/내꺼/algorithm_practice&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
