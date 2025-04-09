@@ -41,7 +41,7 @@ public class Main {
             int cost = edge[2];
 
             if (find(a) != find(b)) {
-                connect(a, b);
+                parent[find(a)] = find(b);
                 total += cost;
             }
         }
@@ -55,15 +55,6 @@ public class Main {
             return x;
         } else {
             return parent[x] = find(parent[x]);
-        }
-    }
-
-    // 연결하기 (같은 그룹으로 만들기)
-    static void connect(int a, int b) {
-        int pa = find(a);
-        int pb = find(b);
-        if (pa != pb) {
-            parent[pa] = pb;
         }
     }
 }
