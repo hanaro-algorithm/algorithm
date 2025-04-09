@@ -40,8 +40,11 @@ public class Main {
             int b = edge[1];
             int cost = edge[2];
 
-            if (find(a) != find(b)) {
-                parent[find(a)] = find(b);
+            int pa = find(a);
+            int pb = find(b);
+
+            if (pa != pb) {
+                parent[pa] = pb;
                 total += cost;
             }
         }
