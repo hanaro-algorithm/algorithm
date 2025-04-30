@@ -46,20 +46,20 @@ const drdc = [
 const deque = new Deque();
 const visited = Array.from({ length: N }, () => new Array(M).fill(-1));
 
-deque.push([0, 0, 0]);
+deque.push([0, 0]);
 visited[0][0] = 0;
 
 while (deque.getLength()) {
-  const [curR, curC, cost] = deque.shift();
+  const [curR, curC] = deque.shift();
   for (const [dr, dc] of drdc) {
     const [nr, nc] = [curR + dr, curC + dc];
     if (nr >= 0 && nr < N && nc >= 0 && nc < M && visited[nr][nc] === -1) {
       if (maze[nr][nc] === 0) {
-        visited[nr][nc] = cost;
-        deque.unshift([nr, nc, cost]);
+        visited[nr][nc] = visited[curR][curC];
+        deque.unshift([nr, nc]);
       } else {
-        visited[nr][nc] = cost + 1;
-        deque.push([nr, nc, cost + 1]);
+        visited[nr][nc] = visited[curR][curC] + 1;
+        deque.push([nr, nc]);
       }
     }
   }
