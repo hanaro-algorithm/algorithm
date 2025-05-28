@@ -23,16 +23,16 @@ public class Main {
             int start = exams[i][0];
             int duration = exams[i][1];
 
-            // 현재 시간부터 다음 시험 시작 전까지의 시간 확인
+            // 현재 시간부터 다음 시험 시작 전까지
             if (start - nowTime >= M) {
                 System.out.println(nowTime);
                 return;
             }
 
-            nowTime = Math.max(nowTime, start + duration);
+            nowTime = start + duration;
         }
 
-        // 마지막 시험 이후에 가능한지 확인
+        // 마지막 시험 이후
         if (S - nowTime >= M) {
             System.out.println(nowTime);
         } else {
