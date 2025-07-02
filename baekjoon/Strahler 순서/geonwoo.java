@@ -1,70 +1,98 @@
-class Queue {
-  constructor() {
-    this.queue = {};
-    this.head = 0;
-    this.tail = 0;
-  }
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
-  enqueue = (item) => {
-    this.queue[this.tail++] = item;
-  };
-  dequeue = () => this.queue[this.head++];
-  length = () => this.tail - this.head;
-}
+public class BOJ_G3_9470_Strahler순서 {
+	static int max;
+	static int [] cnt, maxOrder, maxCnt;
+	static List<ArrayList<Integer>> list;
+	static Queue<Integer> q;
 
-const fs = require("fs");
-const input = fs.readFileSync("/dev/stdin").toString().split("\n");
-const dr = [-1, 0, 1, 0];
-const dc = [0, 1, 0, -1];
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
+		
+		int T = Integer.parseInt(br.readLine());
+		
+		for (int t = 1; t <= T; t++) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			String tmp = st.nextToken();
+			int M = Integer.parseInt(st.nextToken());
+			int P = Integer.parseInt(st.nextToken());
+			
+			max = 0;
+			// 몇번 들어와야 하는지(0이 되면 큐에 넣기)
+			cnt = new int[M+1];
+			// 들어온 순서중 가장 큰 값
+			maxOrder = new int[M+1];
+			// 최댓값 값이 몇번 들어왔는지
+			maxCnt = new int[M+1];
+			list = new ArrayList<>();
+			
+			for (int i = 0; i <= M; i++) {
+				list.add(new ArrayList<>());
+			}
+			
+			for (int i = 0; i < P; i++) {
+				st = new StringTokenizer(br.readLine());
+				
+				int a = Integer.parseInt(st.nextToken());
+				int b = Integer.parseInt(st.nextToken());
+				
+				list.get(a).add(b);
+				cnt[b]++;
+			}
+			
+			q = new ArrayDeque<>();
+			
+			for (int i = 1; i <= M; i++) {
+				if(cnt[i] == 0) {
+					maxOrder[i] = 1;
+					q.add(i);
+				}
+			}
+			
+			solve();
+			
+			sb.append(t+" "+max+"\n");
+			
+		}
+		
+		sb.setLength(sb.length()-1);
+		System.out.println(sb.toString());
+		
+	}
 
-const [N, M] = input[0].split(" ").map(Number);
-const map = [];
-let sheep = 0;
-let wolf = 0;
+	private static void solve() {
+		while(!q.isEmpty()) {
+			int cur = q.poll();
+			
+			max = Math.max(max, maxOrder[cur]);
+			
+			for(int next: list.get(cur)) {
+				if(maxOrder[cur] > maxOrder[next]) {
+					maxOrder[next] = maxOrder[cur];
+					maxCnt[next] = 1;
+				} else if(maxOrder[cur] == maxOrder[next]) {
+					maxCnt[next]++;
+				}
+				
+				cnt[next]--;
+				
+				if(cnt[next] == 0) {
+					if(maxCnt[next] >= 2) maxOrder[next]++;
+					q.add(next);
+				}
+				
+			}
+			
+		}
+		
+	}
 
-for (let i = 1; i <= N; i++) {
-  map.push(input[i].trim().split(""));
-}
-
-for (let i = 0; i < N; i++) {
-  for (let j = 0; j < M; j++) {
-    if (map[i][j] !== "#") bfs(i, j);
-  }
-}
-
-console.log(`${sheep} ${wolf}`);
-
-function bfs(sr, sc) {
-  let sheepCnt = 0;
-  let wolfCnt = 0;
-
-  if (map[sr][sc] === "v") wolfCnt++;
-  else if (map[sr][sc] === "k") sheepCnt++;
-
-  const q = new Queue();
-  q.enqueue([sr, sc]);
-  map[sr][sc] = "#";
-
-  while (q.length()) {
-    const [r, c] = q.dequeue();
-
-    for (let d = 0; d < 4; d++) {
-      let nr = r + dr[d];
-      let nc = c + dc[d];
-
-      if (!check(nr, nc) || map[nr][nc] === "#") continue;
-
-      if (map[nr][nc] === "v") wolfCnt++;
-      else if (map[nr][nc] === "k") sheepCnt++;
-      map[nr][nc] = "#";
-      q.enqueue([nr, nc]);
-    }
-  }
-
-  if (sheepCnt > wolfCnt) sheep += sheepCnt;
-  else wolf += wolfCnt;
-}
-
-function check(r, c) {
-  return r >= 0 && r < N && c >= 0 && c < M;
 }
