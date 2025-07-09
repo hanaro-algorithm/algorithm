@@ -11,11 +11,11 @@ public class Main {
 
         while (T-- > 0) {
             String commands = sc.nextLine();
-            System.out.println(simulate(commands));
+            System.out.println(move(commands));
         }
     }
 
-    static int simulate(String commands) {
+    static int move(String commands) {
         int x = 0, y = 0;
         int dir = 0;
 
