@@ -1,20 +1,22 @@
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().split('\n');
 
-const N = +input[0]; // 사자 우리의 크기
+const N = +input[0]; // 수의 길이
 
-const dp = Array.from({ length: N }, () => new Array(3).fill(0));
+// dp[수의 길이][시작 숫자]
+const dp = Array.from({ length: 1001 }, () => new Array(10).fill(0));
 
-// N=1일 때, 사자 배치 경우의 수 초기화
-dp[0][0] = 1; // 사자를 놓지 않을 때
-dp[0][1] = 1; // 사자를 왼쪽에 배치했을 때
-dp[0][2] = 1; // 사자를 오른쪽에 배치했을 때
+for (let i = 0; i <= 9; i++) dp[1][i] = 1; // 1자리 수는 모두 1개(자기 자신)
 
-for (let i = 1; i < N; i++) {
-  dp[i][0] = (dp[i - 1][0] + dp[i - 1][1] + dp[i - 1][2]) % 9901;
-  dp[i][1] = (dp[i - 1][0] + dp[i - 1][2]) % 9901;
-  dp[i][2] = (dp[i - 1][0] + dp[i - 1][1]) % 9901;
+for (let i = 2; i <= N; i++) {
+    for (let j = 0; j <= 9; j++) {
+        for (let k = 0; k <= 9; k++) {
+            if (j <= k) {
+                dp[i][j] += dp[i - 1][k] % 10007; // 이전 자리수가 본인보다 크거나 같은 수의 개수만 더하기
+            }
+        }
+    }
 }
 
-const total = dp[N - 1][0] + dp[N - 1][1] + dp[N - 1][2];
-console.log(total % 9901);
+const sum = dp[N].reduce((acc, cur) => (acc += cur), 0);
+console.log(sum % 10007);

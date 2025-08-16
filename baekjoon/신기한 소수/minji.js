@@ -1,25 +1,30 @@
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().split('\n');
 
-const A = [...new Set(input[1].split(' ').map(Number))].sort((a, b) => a - b);
-const numbers = input[3].split(' ').map(Number);
+const N = +input[0]; // N자리 숫자
+const prime = [2, 3, 5, 7]; // 일의 자리인 소수
 
-const answer = [];
-numbers.forEach((n) => {
-  let start = 0;
-  let end = A.length - 1;
-  let flag = false;
+const checkPrime = (num) => {
+    if (num < 2) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+};
 
-  while (start <= end) {
-    let mid = Math.floor((start + end) / 2);
-    if (n === A[mid]) {
-      flag = true;
-      break;
-    } else if (n < A[mid]) end = mid - 1;
-    else start = mid + 1;
-  }
+let answer = '';
+const dfs = (numbers, len) => {
+    if (len === N) {
+        answer += Number(numbers) + '\n';
+        return;
+    }
+    for (let odd = 1; odd <= 9; odd += 2) {
+        const num = numbers + String(odd);
+        if (checkPrime(+num)) {
+            dfs(num, len + 1);
+        }
+    }
+};
 
-  answer.push(flag ? 1 : 0);
-});
-
-console.log(answer.join('\n'));
+prime.forEach((p) => dfs(p, 1));
+console.log(answer.trimEnd());
