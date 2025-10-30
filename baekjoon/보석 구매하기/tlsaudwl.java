@@ -28,6 +28,7 @@ public class Main {
             for (int i = 0; i < n; i++) {
                 for (int j = i; j < n; j++) {
                     long sum = prefix[j + 1] - prefix[i];
+
                     int curLen = j - i + 1;
                     int bestLen = bestEnd - bestStart + 1;
 
